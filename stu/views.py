@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index_view(request):
-    return HttpResponse('hello')
+    return render(request, 'index.html')
 
 
 def query1_view(request, year, month):
@@ -17,3 +17,7 @@ def query2_view(request, year, month):
 
 def query3_view(request, year, month, uname):
     return HttpResponse('hello3_%s_%s_%s' % (year, month, uname))
+
+
+def query4_view(request):
+    return HttpResponse('这是query4_view')
