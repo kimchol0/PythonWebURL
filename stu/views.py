@@ -19,5 +19,5 @@ def query3_view(request, year, month, uname):
     return HttpResponse('hello3_%s_%s_%s' % (year, month, uname))
 
 
-def query4_view(request):
-    return HttpResponse('这是query4_view')
+def query4_view(request, num):
+    return HttpResponse('这是query4_view_%s' % num)
