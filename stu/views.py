@@ -1,8 +1,10 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-
 # Create your views here.
+from django.urls import reverse
+
+
 def index_view(request):
     return render(request, 'index.html', {'n': 11})
 
@@ -21,3 +23,8 @@ def query3_view(request, year, month, uname):
 
 def query4_view(request, num):
     return HttpResponse('这是query4_view_%s' % num)
+
+
+def index5_view(request):
+    # 重定向（重新访问）
+    return HttpResponseRedirect(reverse('q', args=(66,)))
