@@ -28,3 +28,7 @@ def query4_view(request, num):
 def index5_view(request):
     # 重定向（重新访问）
     return HttpResponseRedirect(reverse('q', args=(66,)))
+
+
+def query6_view(request):
+    return HttpResponse('query6_view')
