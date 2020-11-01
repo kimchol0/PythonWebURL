@@ -13,3 +13,7 @@ def query1_view(request, year, month):
 
 def query2_view(request, year, month):
     return HttpResponse('hello2_%s_%s' % (year, month))
+
+
+def query3_view(request, year, month, uname):
+    return HttpResponse('hello3_%s_%s_%s' % (year, month, uname))
