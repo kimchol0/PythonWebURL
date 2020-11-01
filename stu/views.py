@@ -9,3 +9,7 @@ def index_view(request):
 
 def query1_view(request, year, month):
     return HttpResponse('hello_%s_%s' % (year, month))
+
+
+def query2_view(request, year, month):
+    return HttpResponse('hello2_%s_%s' % (year, month))
