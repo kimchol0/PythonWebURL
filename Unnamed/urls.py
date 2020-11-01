@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('student/', include('stu.urls', namespace='stus'))  # namespace指给当前跟路由起个名字
+    path('student/', include('stu.urls', namespace='stus')),  # namespace指给当前跟路由起个名字
+    path('student2/', include('stu2.urls'))
 ]
