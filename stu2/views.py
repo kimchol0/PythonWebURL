@@ -6,7 +6,8 @@ from django.shortcuts import render
 def index_view(request):
     scheme = request.scheme
     path = request.path
-    return HttpResponse('scheme:%s' % path)
+    post1 = type(request.POST)
+    return HttpResponse('scheme:%s' % post1)
 
 
 def index1_view(request):
