@@ -5,8 +5,8 @@ from django.shortcuts import render
 # Create your views here.
 def index_view(request):
     scheme = request.scheme
-    body = request.body
-    return HttpResponse('scheme:%s' % body)
+    path = request.path
+    return HttpResponse('scheme:%s' % path)
 
 
 def index1_view(request):
