@@ -13,4 +13,5 @@ def index_view(request):
 
 
 def index1_view(request):
-    return render(request, 'index2.html')
+    # return render(request, 'index2.html')
+    return HttpResponse('hello_worlds', content_type='text/plain')
