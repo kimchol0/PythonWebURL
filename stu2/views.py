@@ -14,4 +14,7 @@ def index_view(request):
 
 def index1_view(request):
     # return render(request, 'index2.html')
-    return HttpResponse('hello_worlds', content_type='text/plain')
+    # return HttpResponse('hello_worlds', content_type='text/plain')
+    response = HttpResponse('hello world')
+    response.__setitem__('Server', 'WSG')
+    return response
